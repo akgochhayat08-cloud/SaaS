@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SaaSify Pro | Precision in every byte</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid #1E293B;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #494bd6 0%, #6f00be 100%);
+        }
+        .primary-gradient:hover {
+            filter: brightness(1.1);
+        }
+        .glow-indigo {
+            box-shadow: 0px 20px 40px rgba(99, 102, 241, 0.1);
+        }
+        .feature-card-highlight {
+            border-top: 1px solid #464554;
+        }
+        body {
+            background-color: #020617;
+            color: #dae2fd;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#6900b3",
+                    "secondary-fixed": "#f0dbff",
+                    "surface-variant": "#2d3449",
+                    "surface-container-low": "#131b2e",
+                    "primary": "#c0c1ff",
+                    "secondary": "#ddb7ff",
+                    "error": "#ffb4ab",
+                    "primary-container": "#8083ff",
+                    "inverse-primary": "#494bd6",
+                    "surface-container-highest": "#2d3449",
+                    "inverse-surface": "#dae2fd",
+                    "on-tertiary": "#4f2500",
+                    "error-container": "#93000a",
+                    "tertiary-container": "#d97721",
+                    "on-surface": "#dae2fd",
+                    "surface-tint": "#c0c1ff",
+                    "on-secondary-fixed": "#2c0051",
+                    "on-tertiary-container": "#452000",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#0d0096",
+                    "tertiary": "#ffb783",
+                    "surface-container": "#171f33",
+                    "on-tertiary-fixed-variant": "#703700",
+                    "tertiary-fixed-dim": "#ffb783",
+                    "on-surface-variant": "#c7c4d7",
+                    "on-primary": "#1000a9",
+                    "secondary-container": "#6f00be",
+                    "inverse-on-surface": "#283044",
+                    "surface": "#0b1326",
+                    "on-tertiary-fixed": "#301400",
+                    "surface-dim": "#0b1326",
+                    "on-secondary-container": "#d6a9ff",
+                    "outline-variant": "#464554",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "surface-container-lowest": "#060e20",
+                    "tertiary-fixed": "#ffdcc5",
+                    "on-secondary": "#490080",
+                    "surface-container-high": "#222a3d",
+                    "on-error": "#690005",
+                    "surface-bright": "#31394d",
+                    "primary-fixed": "#e1e0ff",
+                    "secondary-fixed-dim": "#ddb7ff",
+                    "outline": "#908fa0",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "on-primary-fixed": "#07006c",
+                    "on-background": "#dae2fd",
+                    "background": "#0b1326"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap-lg": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "section-gap-md": "80px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Geist"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "mono-code": ["Geist"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "mono-code": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/20 dark:border-outline-variant/10 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary">
+                SaaSify Pro
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="home.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="features.html">Features</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="pricing.html">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md active:scale-95 transform transition-transform">
+                    Log In
+                </button>
+<button class="primary-gradient text-white px-6 py-2 rounded-lg font-body-md text-body-md active:scale-95 transform transition-transform shadow-lg">
+                    Get Started
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-40 pb-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-gutter text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-6">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">New Release v4.0</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface max-w-4xl mx-auto mb-8 hidden md:block">
+                    Precision engineering for the next generation of SaaS.
+                </h1>
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-surface max-w-4xl mx-auto mb-8 md:hidden">
+                    Precision engineering for next-gen SaaS.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                    Automate complex workflows, unify your data streams, and scale your infrastructure with our enterprise-grade cloud platform.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="primary-gradient text-white px-10 py-4 rounded-lg font-body-lg text-body-lg active:scale-95 transform transition-transform shadow-xl">
+                        Get Started for Free
+                    </button>
+<button class="bg-surface-container-high border border-outline-variant/30 text-on-surface px-10 py-4 rounded-lg font-body-lg text-body-lg hover:bg-surface-container-highest transition-colors active:scale-95 transform transition-transform">
+                        Schedule Demo
+                    </button>
+</div>
+<!-- Dashboard Preview -->
+<div class="mt-20 relative mx-auto max-w-5xl group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
+<div class="relative glass-card rounded-2xl overflow-hidden border border-outline-variant/20 glow-indigo">
+<img alt="Dashboard Analytics" class="w-full h-auto" data-alt="A high-fidelity software dashboard interface displayed on a sleek, dark-mode screen. The UI features complex data visualizations including glowing line charts in indigo and purple gradients, a sidebar with clean iconography, and several metric cards showing rapid growth. The lighting is moody and professional, emphasizing a sophisticated tech aesthetic with deep slate and navy tones." src="https://lh3.googleusercontent.com/aida/AP1WRLuf9-6SXky6OJORJ6OJqwhRMhwtDf5CT9fIgWJxi9vHB1p6MnDDoo9CRFJ0Xd5rVeBi9r5K_M5i2CQyG0QnW9jzsUj55mrotekiotIdMADFlmpSmhKCdCwl_AQ5mQ-3SLhmXm6-1Jbo4OPPfcVs_z7-MTf9El1GjIhcqueim8I_HPNMDGDcxrw0YETzmlauyavn0BY2qfhPl8AyurJSKpGiQKankiwLVOaPdTPBw51BAUeqZ9Y1D8aypQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Logo Cloud -->
+<section class="py-section-gap-md border-y border-outline-variant/10 bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-gutter">
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mb-12 uppercase tracking-[0.2em]">Trusted by technical teams worldwide</p>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-12 items-center justify-items-center opacity-60">
+<div class="text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span> QUANTUM
+                    </div>
+<div class="text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">deployed_code</span> NEXUS
+                    </div>
+<div class="text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">data_exploration</span> VORTEX
+                    </div>
+<div class="text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">security</span> SHIELD
+                    </div>
+<div class="text-headline-md font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">cloud_done</span> STRATUS
+                    </div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-section-gap-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-20">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Built for scale. Designed for speed.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Deploy enterprise infrastructure in minutes with our comprehensive suite of cloud tools.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-card p-8 rounded-xl feature-card-highlight group hover:-translate-y-2 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 !text-[24px]">Instant Deployment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Push code to production globally in under 60 seconds with our optimized edge network and CI/CD pipelines.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-8 rounded-xl feature-card-highlight group hover:-translate-y-2 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-secondary/10 flex items-center justify-center mb-6 group-hover:bg-secondary/20 transition-colors">
+<span class="material-symbols-outlined text-secondary text-3xl">analytics</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 !text-[24px]">Deep Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Gain granular insights into every transaction with real-time monitoring and AI-powered anomaly detection.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-8 rounded-xl feature-card-highlight group hover:-translate-y-2 transition-all duration-300">
+<div class="w-14 h-14 rounded-full bg-tertiary/10 flex items-center justify-center mb-6 group-hover:bg-tertiary/20 transition-colors">
+<span class="material-symbols-outlined text-tertiary text-3xl">lock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 !text-[24px]">Zero Trust Security</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Military-grade encryption and automated compliance scanning baked directly into the core of your infrastructure.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-section-gap-lg bg-surface-container-low relative">
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Go live in three simple steps</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Our intuitive workflow eliminates the friction from enterprise software management.</p>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-3 gap-16">
+<!-- Connector line -->
+<div class="hidden md:block absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-outline-variant/30 to-transparent z-0"></div>
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full primary-gradient flex items-center justify-center text-white font-bold text-xl mb-8 z-10 shadow-lg">1</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 !text-[20px]">Connect your data</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Integrate with 200+ sources including AWS, GCP, and Azure with a single API key.</p>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full primary-gradient flex items-center justify-center text-white font-bold text-xl mb-8 z-10 shadow-lg">2</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 !text-[20px]">Configure AI Models</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Choose from our pre-trained business intelligence models or deploy your own custom LLMs.</p>
+</div>
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full primary-gradient flex items-center justify-center text-white font-bold text-xl mb-8 z-10 shadow-lg">3</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4 !text-[20px]">Scale to Millions</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Watch as your infrastructure auto-scales to handle traffic spikes without any manual intervention.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap-lg bg-surface">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-surface">Join 10,000+ companies growing with us</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="glass-card p-10 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-8 relative z-10">
+                            "SaaSify Pro transformed how our engineering team operates. We've reduced our deployment overhead by 40% while increasing overall system reliability. It's the standard for modern cloud ops."
+                        </p>
+<div class="flex items-center gap-4 relative z-10">
+<img alt="Sarah Jenkins" class="w-12 h-12 rounded-full object-cover" data-alt="A professional headshot of a female CTO in her mid-30s with a confident expression. She is in a modern, brightly lit office environment with soft bokeh in the background. The aesthetic is clean and professional, matching a corporate tech brand's style with natural lighting and soft shadows." src="https://lh3.googleusercontent.com/aida/AP1WRLuB2Eal9l2Z8YABPLSzk9gvfsHH6llv34r0K_sN1sMalZtpkmiHbeu8v6xB2rlbLoQyPqMIAKvof5xT2gTqamHSvMEjRKuvGNVfh_9vRRrvde_nmtxXbRNV7Bvum87raMXztxq0quBwByi5Qj5UuZYk8M9LCwE2MSEKtRIhlz-IEa6xqh5I2OU94r4NcB3Z5w4Ne8JXc1H3wJaEW00qRPcPFzGp_cVDSr3o9ugLYU_yHXix9GgzidLDfMM"/>
+<div>
+<p class="font-bold text-on-surface">Sarah Jenkins</p>
+<p class="font-label-sm text-label-sm text-primary">CTO at TechFlow</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]">format_quote</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-8 relative z-10">
+                            "The precision and data density of their dashboard is unmatched. Finally, a tool that respects the intelligence of the developers using it. The ROI was apparent within the first week."
+                        </p>
+<div class="flex items-center gap-4 relative z-10">
+<img alt="David Chen" class="w-12 h-12 rounded-full object-cover" data-alt="A close-up portrait of a male lead developer with glasses, smiling warmly. The setting is a minimalist studio with cool blue and grey lighting that creates a high-tech, modern feel. The image should convey competence, reliability, and approachability, using a shallow depth of field." src="https://lh3.googleusercontent.com/aida/AP1WRLtBYsq2L1C0XhEgyL7dzabymoNX3eY1k5Iq7VIq1QJncSxrK3q4DIchCpDZ__hWVA73qbLNM7av2vicKiMNDy2frkwsaqqMFhEcLq50f4nigSsM78osSoFQ7_lpDIw3SyP03025q6ASOu0dCrkHAfmvBBvOxjIlRbCOWH2LJbrrnN9W7SoQ9w1hB_AHbYP-IxQL-UcYcaeJP2ztfjbdjcDdqfGCg5VP40GSJkpQpAqfI-RyaSwej9qcVok"/>
+<div>
+<p class="font-bold text-on-surface">David Chen</p>
+<p class="font-label-sm text-label-sm text-primary">Lead Architect at Quantix</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap-lg">
+<div class="max-w-4xl mx-auto px-gutter">
+<div class="primary-gradient p-12 md:p-20 rounded-[2rem] text-center shadow-2xl relative overflow-hidden">
+<div class="absolute inset-0 opacity-10">
+
+</div>
+<h2 class="font-display-lg-mobile md:text-headline-md text-white mb-6 relative z-10">Ready to build the future?</h2>
+<p class="text-white/80 font-body-lg text-body-lg mb-10 max-w-xl mx-auto relative z-10">Start your 14-day free trial today. No credit card required. Cancel anytime.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+<button class="bg-white text-inverse-primary px-10 py-4 rounded-lg font-body-lg text-body-lg font-bold hover:bg-on-surface transition-colors">
+                            Get Started Now
+                        </button>
+<button class="bg-white/10 border border-white/20 text-white px-10 py-4 rounded-lg font-body-lg text-body-lg hover:bg-white/20 transition-colors">
+                            Contact Sales
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full py-section-gap-md">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary mb-6">
+                    SaaSify Pro
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Next-generation enterprise software for the modern cloud era.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-on-surface">Product</h5>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Features</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Pricing</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Help Center</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-bold text-on-surface">Company</h5>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Contact</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors hover:underline" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-bold text-on-surface">Subscribe</h5>
+<div class="flex">
+<input class="bg-surface-dim border border-outline-variant rounded-l-lg px-4 py-2 w-full focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Email address" type="email"/>
+<button class="primary-gradient p-2 rounded-r-lg">
+<span class="material-symbols-outlined text-white">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface-variant">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary/20 transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface-variant">group</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-16 pt-8 border-t border-outline-variant/10 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 SaaSify Pro. All rights reserved. Precision in every byte.</p>
+</div>
+</footer>
+</body></html>
